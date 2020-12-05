@@ -1,3 +1,4 @@
-img_id=$(docker image list | grep "sanu/docker" | awk '{print $3}')
-cont_id=$(docker ps | grep $img_id | awk '{print $1}')
+img_name="sanu/docker"
+cont_id=$(docker ps | grep $img_name | awk '{print $1}')
+echo "cont_id--- $cont_id"
 docker exec -it $cont_id /bin/bash

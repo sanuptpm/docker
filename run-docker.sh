@@ -10,5 +10,7 @@ docker ps
 echo "=======check port====="
 netstat -tuplen | grep 49160
 
+sleep 5
+
 echo -e "=====test with curl======\n"
 curl -i localhost:49160
